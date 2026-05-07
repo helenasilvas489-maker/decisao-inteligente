@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Box } from "@mui/material";
+import Header from "./components/Header";
+import ResumoFinanceiro from "./components/ResumoFinanceiro";
+import Insights from "./components/Insights";
+import Simulador from "./components/Simulador";
+import GraficoGastos from "./components/GraficoGastos";
+import dados from "./data/dados.json";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ backgroundColor: "#0a0e1a", minHeight: "100vh" }}>
+      <Header usuario={dados.usuario} />
+
+      <Box
+        sx={{
+          maxWidth: "1000px",
+          margin: "0 auto",
+          padding: "0 24px 40px 24px",
+        }}
+      >
+        <ResumoFinanceiro usuario={dados.usuario} gastos={dados.gastos} />
+        <Insights
+          gastos={dados.gastos}
+          rendaMensal={dados.usuario.rendaMensal}
+          metaEconomia={dados.metaEconomia}
+        />
+        <Simulador />
+      </Box>
+    </Box>
   );
 }
 
