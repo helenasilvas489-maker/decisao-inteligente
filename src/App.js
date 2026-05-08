@@ -9,7 +9,7 @@ import dados from "./data/dados.json";
 
 function App() {
   return (
-    <Box sx={{ backgroundColor: "#0a0e1a", minHeight: "100vh" }}>
+    <Box sx={{ backgroundColor: "#0A1628", minHeight: "100vh" }}>
       <Header usuario={dados.usuario} />
 
       <Box
@@ -20,6 +20,7 @@ function App() {
         }}
       >
         <ResumoFinanceiro usuario={dados.usuario} gastos={dados.gastos} />
+        <GraficoGastos gastos={dados.gastos} />
         <Insights
           gastos={dados.gastos}
           rendaMensal={dados.usuario.rendaMensal}

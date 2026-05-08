@@ -33,10 +33,11 @@ function Simulador() {
 
       <Card
         sx={{
-          background: "linear-gradient(135deg, #1a1f35, #242938)",
+          background: "linear-gradient(135deg, #002366, #003F88)",
           borderRadius: "20px",
           padding: "30px",
           boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
+          border: "1px solid rgba(247,148,29,0.3)",
           mb: 3,
         }}
       >
@@ -58,11 +59,11 @@ function Simulador() {
             <Chip
               label={`R$ ${valorEconomia}`}
               sx={{
-                backgroundColor: "rgba(66, 165, 245, 0.15)",
-                color: "#42a5f5",
+                backgroundColor: "rgba(247,148,29,0.15)",
+                color: "#F7941D",
                 fontWeight: "bold",
                 fontSize: "0.95rem",
-                border: "1px solid rgba(66,165,245,0.3)",
+                border: "1px solid rgba(247,148,29,0.4)",
               }}
             />
           </Box>
@@ -73,13 +74,13 @@ function Simulador() {
             step={50}
             onChange={(e, val) => setValorEconomia(val)}
             sx={{
-              color: "#42a5f5",
+              color: "#F7941D",
               height: 6,
               "& .MuiSlider-thumb": {
-                backgroundColor: "#42a5f5",
+                backgroundColor: "#F7941D",
                 width: 18,
                 height: 18,
-                "&:hover": { boxShadow: "0 0 0 8px rgba(66,165,245,0.2)" },
+                "&:hover": { boxShadow: "0 0 0 8px rgba(247,148,29,0.2)" },
               },
             }}
           />
@@ -117,11 +118,11 @@ function Simulador() {
             <Chip
               label={`${meses} meses`}
               sx={{
-                backgroundColor: "rgba(102, 187, 106, 0.15)",
-                color: "#66bb6a",
+                backgroundColor: "rgba(247,148,29,0.15)",
+                color: "#F7941D",
                 fontWeight: "bold",
                 fontSize: "0.95rem",
-                border: "1px solid rgba(102,187,106,0.3)",
+                border: "1px solid rgba(247,148,29,0.4)",
               }}
             />
           </Box>
@@ -132,13 +133,13 @@ function Simulador() {
             step={1}
             onChange={(e, val) => setMeses(val)}
             sx={{
-              color: "#66bb6a",
+              color: "#F7941D",
               height: 6,
               "& .MuiSlider-thumb": {
-                backgroundColor: "#66bb6a",
+                backgroundColor: "#F7941D",
                 width: 18,
                 height: 18,
-                "&:hover": { boxShadow: "0 0 0 8px rgba(102,187,106,0.2)" },
+                "&:hover": { boxShadow: "0 0 0 8px rgba(247,148,29,0.2)" },
               },
             }}
           />
@@ -158,7 +159,7 @@ function Simulador() {
           </Box>
         </Box>
 
-        {/* Botão menor e centralizado */}
+        {/* Botão */}
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Button
             variant="contained"
@@ -166,16 +167,17 @@ function Simulador() {
             startIcon={<PlayArrowIcon />}
             endIcon={<SavingsIcon />}
             sx={{
-              background: "linear-gradient(135deg, #1565c0, #42a5f5)",
+              background: "linear-gradient(135deg, #F7941D, #FFB74D)",
               padding: "10px 32px",
               borderRadius: "50px",
               fontSize: "0.95rem",
               fontWeight: "bold",
               textTransform: "none",
-              boxShadow: "0 4px 20px rgba(66,165,245,0.4)",
+              color: "white",
+              boxShadow: "0 4px 20px rgba(247,148,29,0.4)",
               "&:hover": {
-                background: "linear-gradient(135deg, #1976d2, #64b5f6)",
-                boxShadow: "0 6px 24px rgba(66,165,245,0.6)",
+                background: "linear-gradient(135deg, #E8830A, #F7941D)",
+                boxShadow: "0 6px 24px rgba(247,148,29,0.6)",
                 transform: "translateY(-2px)",
               },
               transition: "all 0.2s ease",
@@ -191,20 +193,21 @@ function Simulador() {
         <Box>
           <Typography variant="h6" sx={{ color: "white", mb: 2 }}>
             📈 Se você economizar{" "}
-            <span style={{ color: "#42a5f5" }}>R$ {valorEconomia}</span>/mês:
+            <span style={{ color: "#F7941D" }}>R$ {valorEconomia}</span>/mês:
           </Typography>
           <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
             {resultados.map((r) => (
               <Card
                 key={r.mes}
                 sx={{
-                  background: "linear-gradient(135deg, #1565c0, #1976d2)",
+                  background: "linear-gradient(135deg, #003F88, #0055BB)",
                   borderRadius: "14px",
                   padding: "14px 18px",
                   textAlign: "center",
                   minWidth: "90px",
                   flex: 1,
                   boxShadow: "0 4px 16px rgba(0,0,0,0.3)",
+                  borderTop: "2px solid #F7941D",
                   transition: "transform 0.2s",
                   "&:hover": { transform: "translateY(-4px)" },
                 }}
@@ -217,7 +220,7 @@ function Simulador() {
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ color: "white", fontWeight: "bold" }}
+                  sx={{ color: "#F7941D", fontWeight: "bold" }}
                 >
                   R$ {r.totalEconomizado}
                 </Typography>

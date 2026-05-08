@@ -10,22 +10,19 @@ function Insights({ gastos, rendaMensal, metaEconomia }) {
 
   const config = {
     perigo: {
-      cor: "#ef5350",
-      fundo: "rgba(239, 83, 80, 0.1)",
-      borda: "#ef5350",
-      icon: <WarningIcon sx={{ color: "#ef5350" }} />,
+      cor: "#F7941D",
+      borda: "#F7941D",
+      icon: <WarningIcon sx={{ color: "#F7941D" }} />,
       label: "Atenção",
     },
     atencao: {
-      cor: "#ffa726",
-      fundo: "rgba(255, 167, 38, 0.1)",
-      borda: "#ffa726",
-      icon: <InfoIcon sx={{ color: "#ffa726" }} />,
+      cor: "#FFB74D",
+      borda: "#FFB74D",
+      icon: <InfoIcon sx={{ color: "#FFB74D" }} />,
       label: "Dica",
     },
     sucesso: {
       cor: "#66bb6a",
-      fundo: "rgba(102, 187, 106, 0.1)",
       borda: "#66bb6a",
       icon: <CheckCircleIcon sx={{ color: "#66bb6a" }} />,
       label: "Parabéns",
@@ -42,7 +39,7 @@ function Insights({ gastos, rendaMensal, metaEconomia }) {
           mb: 1,
         }}
       >
-        🧠 Insights Automáticos
+        Insights Automáticos
       </Typography>
       <Typography
         variant="body2"
@@ -58,7 +55,7 @@ function Insights({ gastos, rendaMensal, metaEconomia }) {
             <Card
               key={index}
               sx={{
-                background: `linear-gradient(135deg, #1a1f35, #242938)`,
+                background: "linear-gradient(135deg, #002366, #003F88)",
                 borderRadius: "16px",
                 padding: "20px 24px",
                 borderLeft: `4px solid ${c.borda}`,
@@ -76,7 +73,7 @@ function Insights({ gastos, rendaMensal, metaEconomia }) {
                 label={c.label}
                 size="small"
                 sx={{
-                  backgroundColor: c.fundo,
+                  backgroundColor: "rgba(247,148,29,0.15)",
                   color: c.cor,
                   fontWeight: "bold",
                   border: `1px solid ${c.borda}`,

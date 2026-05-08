@@ -15,25 +15,22 @@ function ResumoFinanceiro({ usuario, gastos }) {
       titulo: "Renda Mensal",
       valor: usuario.rendaMensal,
       icon: <TrendingUpIcon sx={{ fontSize: 30 }} />,
-      cor: "#42a5f5",
-      fundo: "linear-gradient(135deg, #1565c0, #1976d2)",
+      fundo: "linear-gradient(135deg, #003F88, #0055BB)",
     },
     {
       titulo: "Total Gasto",
       valor: totalGastos,
       icon: <TrendingDownIcon sx={{ fontSize: 30 }} />,
-      cor: "#ef5350",
-      fundo: "linear-gradient(135deg, #b71c1c, #c62828)",
+      fundo: "linear-gradient(135deg, #C0390A, #E84A0A)",
     },
     {
       titulo: "Saldo Restante",
       valor: saldo,
       icon: <AccountBalanceIcon sx={{ fontSize: 30 }} />,
-      cor: "#66bb6a",
       fundo:
         saldo >= 0
           ? "linear-gradient(135deg, #1b5e20, #2e7d32)"
-          : "linear-gradient(135deg, #b71c1c, #c62828)",
+          : "linear-gradient(135deg, #C0390A, #E84A0A)",
     },
   ];
 
@@ -43,7 +40,7 @@ function ResumoFinanceiro({ usuario, gastos }) {
       <Box
         sx={{
           display: "flex",
-          gap: 2,
+          gap: 3,
           flexWrap: "wrap",
           mb: 3,
         }}
@@ -53,12 +50,13 @@ function ResumoFinanceiro({ usuario, gastos }) {
             key={index}
             sx={{
               flex: 1,
-              minWidth: "200px",
+              minWidth: "220px",
               background: card.fundo,
-              borderRadius: "16px",
-              padding: "24px",
+              borderRadius: "20px",
+              padding: "28px 24px",
               color: "white",
               boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
+              borderTop: "3px solid #F7941D",
             }}
           >
             <Box
@@ -79,19 +77,20 @@ function ResumoFinanceiro({ usuario, gastos }) {
       {/* Barra de progresso */}
       <Card
         sx={{
-          background: "linear-gradient(135deg, #1a1f35, #242938)",
-          borderRadius: "16px",
+          background: "linear-gradient(135deg, #002366, #003F88)",
+          borderRadius: "20px",
           padding: "24px",
           boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
+          border: "1px solid rgba(247,148,29,0.3)",
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "space-between", mb: 1 }}>
           <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)" }}>
-            💸 Percentual gasto da renda
+            Percentual gasto da renda
           </Typography>
           <Typography
             variant="body2"
-            sx={{ color: "white", fontWeight: "bold" }}
+            sx={{ color: "#F7941D", fontWeight: "bold" }}
           >
             {porcentagemGasta.toFixed(1)}%
           </Typography>
@@ -104,7 +103,7 @@ function ResumoFinanceiro({ usuario, gastos }) {
             borderRadius: 5,
             backgroundColor: "rgba(255,255,255,0.1)",
             "& .MuiLinearProgress-bar": {
-              backgroundColor: porcentagemGasta > 80 ? "#ef5350" : "#42a5f5",
+              backgroundColor: porcentagemGasta > 80 ? "#F7941D" : "#42a5f5",
               borderRadius: 5,
             },
           }}
@@ -114,8 +113,8 @@ function ResumoFinanceiro({ usuario, gastos }) {
           sx={{ color: "rgba(255,255,255,0.5)", mt: 1, display: "block" }}
         >
           {porcentagemGasta > 80
-            ? "⚠️ Atenção! Você já usou mais de 80% da sua renda!"
-            : "✅ Seus gastos estão sob controle!"}
+            ? " Atenção! Você já usou mais de 80% da sua renda!"
+            : " Seus gastos estão sob controle!"}
         </Typography>
       </Card>
     </Box>
