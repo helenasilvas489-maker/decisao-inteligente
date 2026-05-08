@@ -51,7 +51,7 @@ function Simulador() {
             }}
           >
             <Typography
-              sx={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem" }}
+              sx={{ color: "rgba(255,255,255,0.7)", fontSize: "1rem" }}
             >
               💰 Valor a economizar por mês
             </Typography>
@@ -59,7 +59,7 @@ function Simulador() {
               label={`R$ ${valorEconomia}`}
               sx={{
                 backgroundColor: "rgba(66, 165, 245, 0.15)",
-                color: "#42a5f5",
+                color: "#005ca9",
                 fontWeight: "bold",
                 fontSize: "0.95rem",
                 border: "1px solid rgba(66,165,245,0.3)",
@@ -73,10 +73,10 @@ function Simulador() {
             step={50}
             onChange={(e, val) => setValorEconomia(val)}
             sx={{
-              color: "#42a5f5",
+              color: "#005ca9",
               height: 6,
               "& .MuiSlider-thumb": {
-                backgroundColor: "#42a5f5",
+                backgroundColor: "#005ca9",
                 width: 18,
                 height: 18,
                 "&:hover": { boxShadow: "0 0 0 8px rgba(66,165,245,0.2)" },
@@ -110,18 +110,18 @@ function Simulador() {
             }}
           >
             <Typography
-              sx={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem" }}
+              sx={{ color: "rgba(255,255,255,0.7)", fontSize: "1rem" }}
             >
               📅 Por quantos meses?
             </Typography>
             <Chip
               label={`${meses} meses`}
               sx={{
-                backgroundColor: "rgba(102, 187, 106, 0.15)",
-                color: "#66bb6a",
+                backgroundColor: "rgba(242, 145, 0, 0.15)",
+                color: "#f29100",
                 fontWeight: "bold",
                 fontSize: "0.95rem",
-                border: "1px solid rgba(102,187,106,0.3)",
+                border: "1px solid rgba(242, 145, 0, 0.3)",
               }}
             />
           </Box>
@@ -132,13 +132,13 @@ function Simulador() {
             step={1}
             onChange={(e, val) => setMeses(val)}
             sx={{
-              color: "#66bb6a",
+              color: "#f29100",
               height: 6,
               "& .MuiSlider-thumb": {
-                backgroundColor: "#66bb6a",
+                backgroundColor: "#f29100",
                 width: 18,
                 height: 18,
-                "&:hover": { boxShadow: "0 0 0 8px rgba(102,187,106,0.2)" },
+                "&:hover": { boxShadow: "0 0 0 8px rgba(242, 145, 0, 0.2)" },
               },
             }}
           />
@@ -166,16 +166,16 @@ function Simulador() {
             startIcon={<PlayArrowIcon />}
             endIcon={<SavingsIcon />}
             sx={{
-              background: "linear-gradient(135deg, #1565c0, #42a5f5)",
+              background: "linear-gradient(135deg, #003366, #005ca9)",
               padding: "10px 32px",
               borderRadius: "50px",
               fontSize: "0.95rem",
               fontWeight: "bold",
               textTransform: "none",
-              boxShadow: "0 4px 20px rgba(66,165,245,0.4)",
+              boxShadow: "0 4px 20px rgba(66,165,245,0.19)",
               "&:hover": {
-                background: "linear-gradient(135deg, #1976d2, #64b5f6)",
-                boxShadow: "0 6px 24px rgba(66,165,245,0.6)",
+                background: "linear-gradient(135deg, #003366, #005ca9)",
+                boxShadow: "0 6px 24px rgba(66,165,245,0.16)",
                 transform: "translateY(-2px)",
               },
               transition: "all 0.2s ease",
@@ -191,14 +191,14 @@ function Simulador() {
         <Box>
           <Typography variant="h6" sx={{ color: "white", mb: 2 }}>
             📈 Se você economizar{" "}
-            <span style={{ color: "#42a5f5" }}>R$ {valorEconomia}</span>/mês:
+            <span style={{ color: "#54bbff" }}>R$ {valorEconomia}</span>/mês:
           </Typography>
           <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
             {resultados.map((r) => (
               <Card
                 key={r.mes}
                 sx={{
-                  background: "linear-gradient(135deg, #1565c0, #1976d2)",
+                  background: "linear-gradient(135deg, #003366, #005ca9)",
                   borderRadius: "14px",
                   padding: "14px 18px",
                   textAlign: "center",
@@ -211,7 +211,7 @@ function Simulador() {
               >
                 <Typography
                   variant="caption"
-                  sx={{ color: "rgba(255,255,255,0.6)", display: "block" }}
+                  sx={{ color: "rgba(255,255,255,0.8)", display: "block" }}
                 >
                   Mês {r.mes}
                 </Typography>

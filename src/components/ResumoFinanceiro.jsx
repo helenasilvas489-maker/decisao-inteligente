@@ -11,31 +11,31 @@ function ResumoFinanceiro({ usuario, gastos }) {
   const porcentagemGasta = (totalGastos / usuario.rendaMensal) * 100;
 
   const cards = [
-    {
-      titulo: "Renda Mensal",
-      valor: usuario.rendaMensal,
-      icon: <TrendingUpIcon sx={{ fontSize: 30 }} />,
-      cor: "#42a5f5",
-      fundo: "linear-gradient(135deg, #1565c0, #1976d2)",
-    },
-    {
-      titulo: "Total Gasto",
-      valor: totalGastos,
-      icon: <TrendingDownIcon sx={{ fontSize: 30 }} />,
-      cor: "#ef5350",
-      fundo: "linear-gradient(135deg, #b71c1c, #c62828)",
-    },
-    {
-      titulo: "Saldo Restante",
-      valor: saldo,
-      icon: <AccountBalanceIcon sx={{ fontSize: 30 }} />,
-      cor: "#66bb6a",
-      fundo:
-        saldo >= 0
-          ? "linear-gradient(135deg, #1b5e20, #2e7d32)"
-          : "linear-gradient(135deg, #b71c1c, #c62828)",
-    },
-  ];
+  {
+    titulo: "RENDA MENSAL",
+    valor: usuario.rendaMensal,
+    icon: <TrendingUpIcon sx={{ fontSize: 30 }} />,
+    cor: "#FFB81C", 
+    fundo: "linear-gradient(135deg, #003366 0%, #005ca9 100%)", 
+  },
+  {
+    titulo: "TOTAL GASTO",
+    valor: totalGastos,
+    icon: <TrendingDownIcon sx={{ fontSize: 30 }} />,
+    cor: "#FFFFFF", 
+    fundo: "linear-gradient(135deg, #C47500 0%, #f29100 100%)", 
+  },
+  {
+    titulo: "SALDO RESTANTE",
+    valor: saldo,
+    icon: <AccountBalanceIcon sx={{ fontSize: 30 }} />,
+    cor: "#FFFFFF",
+    fundo:
+      saldo >= 0
+        ? "linear-gradient(135deg, #005ca9 0%, #54bbff 100%)" 
+        : "linear-gradient(135deg, #d32f2f 0%, #f29100 100%)",
+  },
+];
 
   return (
     <Box sx={{ mt: 3, mb: 4 }}>
@@ -87,7 +87,7 @@ function ResumoFinanceiro({ usuario, gastos }) {
       >
         <Box sx={{ display: "flex", justifyContent: "space-between", mb: 1 }}>
           <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)" }}>
-            💸 Percentual gasto da renda
+            💸 Índice de Consumo:
           </Typography>
           <Typography
             variant="body2"
@@ -104,7 +104,7 @@ function ResumoFinanceiro({ usuario, gastos }) {
             borderRadius: 5,
             backgroundColor: "rgba(255,255,255,0.1)",
             "& .MuiLinearProgress-bar": {
-              backgroundColor: porcentagemGasta > 80 ? "#ef5350" : "#42a5f5",
+              backgroundColor: porcentagemGasta > 80 ? "#f29100" : "#003366",
               borderRadius: 5,
             },
           }}

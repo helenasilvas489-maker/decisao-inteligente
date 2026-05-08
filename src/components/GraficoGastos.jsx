@@ -12,12 +12,12 @@ import { agruparPorCategoria } from "../utils/calculos";
 
 // Cores para cada fatia do gráfico
 const CORES = [
-  "#42a5f5",
-  "#ef5350",
+  "#005ca9",
+  "#ffb81c",
   "#66bb6a",
-  "#ffa726",
-  "#ab47bc",
-  "#26c6da",
+  "#f29100",
+  "#003366",
+  "#54bbff",
 ];
 
 function GraficoGastos({ gastos }) {

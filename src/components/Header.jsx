@@ -8,10 +8,11 @@ function Header({ usuario }) {
     <Box
       sx={{
         background:
-          "linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #01579b 100%)",
+          "linear-gradient(135deg, #003366 0%, #005ca9 100%)",
         padding: "40px 40px 60px 40px",
         position: "relative",
         overflow: "hidden",
+        borderBottom: "4px solid #f29100",
       }}
     >
       {/* Círculos decorativos */}
@@ -39,22 +40,22 @@ function Header({ usuario }) {
       />
 
       {/* Conteúdo */}
-      <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 3 }}>
-        <Avatar sx={{ backgroundColor: "#42a5f5", width: 50, height: 50 }}>
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 4 }}>
+        <Avatar sx={{ backgroundColor: "#f29100", width: 48, height: 48, boxShadow: "0px 4px 12px rgba(0,0,0,0.15)" }}>
           <AccountBalanceWalletIcon />
         </Avatar>
         <Box>
-          <Typography variant="h5" sx={{ color: "white", fontWeight: "bold" }}>
+          <Typography variant="h5" sx={{ color: "white", fontWeight: "800" }}>
             💡 Decisão Inteligente
           </Typography>
-          <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)" }}>
-            Plataforma de Análise Financeira
+          <Typography variant="caption" sx={{ color: "rgba(255,255,255,0.5)", textTransform: "uppercase" }}>
+            Análise Financeira
           </Typography>
         </Box>
         <Chip
           icon={<TrendingUpIcon />}
           label="Ativo"
-          sx={{ ml: "auto", backgroundColor: "#43a047", color: "white" }}
+          sx={{ ml: "auto", backgroundColor: "#66bb6a", fontWeight: "bold", textTransform: "uppercase", color: "white"}}
         />
       </Box>
 
